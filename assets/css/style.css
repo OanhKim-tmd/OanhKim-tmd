@@ -1004,6 +1004,9 @@ main {
   font-size: 20px;
   padding: 18px;
   border-radius: 12px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
   opacity: 0;
   z-index: 1;
   transition: var(--transition-1);
@@ -1015,6 +1018,16 @@ main {
 }
 
 .project-item-icon-box ion-icon { --ionicon-stroke-width: 50px; }
+
+.project-item-icon-box::after {
+  content: "view";
+  font-size: 1rem;
+  text-transform: lowercase;
+  display: inline-block;
+  color: inherit;
+  margin-left: 0.5rem;
+  white-space: nowrap;
+}
 
 .project-img img {
   width: 100%;
