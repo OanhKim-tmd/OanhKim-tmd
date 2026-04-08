@@ -209,11 +209,10 @@ article {
 
 .icon-box ion-icon { --ionicon-stroke-width: 35px; }
 
-article { display: none; }
-
-article.active {
+article {
   display: block;
   animation: fade 0.5s ease backwards;
+  margin-bottom: 20px;
 }
 
 @keyframes fade {
@@ -277,7 +276,7 @@ article.active {
   position: relative;
   background: var(--border-gradient-onyx);
   padding: 15px;
-  padding-top: 45px;
+  padding-top: 15px;
   border-radius: 14px;
   box-shadow: var(--shadow-2);
   cursor: pointer;
@@ -303,7 +302,7 @@ article.active {
 
 main {
   margin: 10px 5px;
-  margin-bottom: 75px;
+  margin-bottom: 20px;
   min-width: 259px;
 }
 
@@ -528,7 +527,7 @@ main {
  * #service 
  */
 
-.service { margin-bottom: 35px; }
+.service { margin-bottom: 20px; }
 
 .service-title { margin-bottom: 20px; }
 
@@ -576,7 +575,7 @@ main {
  * #testimonials 
  */
 
-.testimonials { margin-bottom: 30px; }
+.testimonials { margin-bottom: 15px; }
 
 .testimonials-title { margin-bottom: 20px; }
 
@@ -586,8 +585,8 @@ main {
   align-items: flex-start;
   gap: 15px;
   margin: 0 -15px;
-  padding: 25px 15px;
-  padding-bottom: 35px;
+  padding: 10px 15px;
+  padding-bottom: 10px;
   overflow-x: auto;
   scroll-behavior: smooth;
   overscroll-behavior-inline: contain;
@@ -780,14 +779,14 @@ main {
   #RESUME
 \*-----------------------------------*/
 
-.article-title { margin-bottom: 30px; }
+.article-title { margin-bottom: 15px; }
 
 
 /**
  * education and experience 
  */
 
-.timeline { margin-bottom: 30px; }
+.timeline { margin-bottom: 15px; }
 
 .timeline .title-wrapper {
   display: flex;
@@ -1465,7 +1464,7 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .about .article-title { margin-bottom: 20px; }
 
-  .about-text { margin-bottom: 40px; }
+  .about-text { margin-bottom: 20px; }
 
   /* service */
 
@@ -1872,7 +1871,7 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .sidebar, article { width: auto; }
 
-  article { min-height: 100%; }
+  /* git addarticle { min-height: 100%; } */
 
 
 
@@ -1957,4 +1956,12 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .timeline-text { max-width: 700px; }
 
+}
+
+/*-----------------------------------*\
+  #SMOOTH SCROLLING
+\*-----------------------------------*/
+
+html {
+  scroll-behavior: smooth;
 }
