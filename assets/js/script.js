@@ -157,3 +157,34 @@ for (let i = 0; i < navigationLinks.length; i++) {
 
   });
 }
+
+
+
+// carousel variables
+const carouselContainers = document.querySelectorAll(".carousel-container");
+
+carouselContainers.forEach(function(container) {
+  const prevBtn = container.querySelector("[data-carousel-prev]");
+  const nextBtn = container.querySelector("[data-carousel-next]");
+  const wrapper = container.querySelector(".carousel-wrapper");
+  const images = container.querySelectorAll(".carousel-image");
+  let currentIndex = 0;
+
+  function showImage(index) {
+    wrapper.style.transform = `translateX(-${index * 100}%)`;
+  }
+
+  prevBtn.addEventListener("click", function(e) {
+    e.preventDefault();
+    e.stopPropagation();
+    currentIndex = (currentIndex - 1 + images.length) % images.length;
+    showImage(currentIndex);
+  });
+
+  nextBtn.addEventListener("click", function(e) {
+    e.preventDefault();
+    e.stopPropagation();
+    currentIndex = (currentIndex + 1) % images.length;
+    showImage(currentIndex);
+  });
+});
